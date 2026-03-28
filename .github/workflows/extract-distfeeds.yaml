@@ -19,7 +19,7 @@ jobs:
           sudo apt install -y binwalk
       - name: Download and extract
         run: |
-          curl https://downloads.openwrt.org/snapshots/targets/airoha/an7581/openwrt-airoha-an7581-airoha_an7581-evb-squashfs-sysupgrade.bin --output sysupgrade.bin
+          curl https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/openwrt-mediatek-filogic-zbtlink_zbt-z8103ax-c-squashfs-sysupgrade.bin --output sysupgrade.bin
           binwalk -e sysupgrade.bin
       - name: Prepare artifact
         run: |
