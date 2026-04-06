@@ -2,7 +2,7 @@ name: update-all
 
 on:
   schedule:
-    - cron: '15 */2 * * *'
+    - cron: '15 */12 * * *'
   workflow_dispatch:
 
 env:
@@ -14,7 +14,8 @@ jobs:
     runs-on: ubuntu-slim
     strategy:
       matrix:
-        environment: [main, snapshot]
+#        environment: [main, snapshot]
+        environment: [main]
     permissions:
       contents: write
     environment: ${{ matrix.environment }}
