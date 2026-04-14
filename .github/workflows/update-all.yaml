@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 env:
-  REMOTE_REPOSITORY: OpenWRT-fanboy/OpenW1700k
+  REMOTE_REPOSITORY: joelinux60/openwrt-joelinux60
 
 jobs:
   update:
@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-slim
     strategy:
       matrix:
-        environment: [main, snapshot, minimal-OC-ubi-AUTO]
+        environment: [main]
     permissions:
       contents: write
     environment: ${{ matrix.environment }}
